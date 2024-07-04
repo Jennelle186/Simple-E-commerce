@@ -25,7 +25,7 @@ export default function Login({
       return redirect("/login?message=Could not authenticate user");
     }
 
-    return redirect("/protected");
+    return redirect("/protected/account");
   };
 
   const signUp = async (formData: FormData) => {
@@ -40,7 +40,7 @@ export default function Login({
       email,
       password,
       options: {
-        emailRedirectTo: `${origin}/auth/callback`,
+          emailRedirectTo: `${origin}/auth/callback`,
       },
     });
 
@@ -53,6 +53,7 @@ export default function Login({
   };
 
   return (
+    <div className="min-h-screen flex flex-col items-center">
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
       <Link
         href="/"
@@ -115,6 +116,7 @@ export default function Login({
           </p>
         )}
       </form>
+    </div>
     </div>
   );
 }
