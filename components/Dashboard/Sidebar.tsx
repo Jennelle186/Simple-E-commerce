@@ -20,9 +20,9 @@ interface CommandLink {
 
 const commandLinks: CommandLink[] = [
     { href: "/protected/admin", icon: LayoutDashboard, label: "Dashboard" },
-    { href: "/protected/admin/Genre", icon: ListTree, label: "Genre" },
-    { href: "/protected/admin", icon: BookOpenText, label: "Books" },
-    { href: "/protected/admin", icon: SquareUser, label: "Authors" },
+    { href: "/protected/admin/genre", icon: ListTree, label: "Genre" },
+    { href: "/protected/admin/authors", icon: SquareUser, label: "Authors" },
+    { href: "/protected/admin/books", icon: BookOpenText, label: "Books" },
     { href: "/protected/admin", icon: ShoppingCart, label: "Orders" },
     { href: "/protected/admin", icon: Users, label: "Customers" },
 ];
