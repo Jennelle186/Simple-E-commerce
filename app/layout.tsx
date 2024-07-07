@@ -2,6 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { createClient } from "@/utils/supabase/client";
 import { redirect } from "next/navigation";
+import { Toaster } from "@/components/ui/toaster";
 
 
 const defaultUrl = process.env.VERCEL_URL
@@ -28,6 +29,7 @@ export default async function RootLayout({
           >
           {children}
         </main>
+        <Toaster/>
       </body>
     </html>
   );

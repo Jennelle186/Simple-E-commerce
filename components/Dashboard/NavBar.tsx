@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from '../img/logo.jpeg';
+import logo from '../../img/logo.jpeg';
 import {
     Avatar,
     AvatarFallback,
@@ -14,7 +14,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
   const adminLinks = [
     {name: 'Profile', href: "/protected/account"},

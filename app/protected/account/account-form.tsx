@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { type User } from '@supabase/supabase-js'
 import Avatar from './avatar'
-import NavBar from '@/components/NavBar'
+import NavBar from '@/components/Dashboard/NavBar'
 
 export default function AccountForm({ user }: { user: User | null }) {
   const supabase = createClient()

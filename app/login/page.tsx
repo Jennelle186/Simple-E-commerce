@@ -3,6 +3,8 @@ import { headers } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { SubmitButton } from "./submit-button";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@radix-ui/react-dropdown-menu";
 
 export default function Login({
   searchParams,
@@ -46,7 +48,7 @@ export default function Login({
 
     if (error) {
       // return redirect("/login?message=Could not authenticate user");
-      return redirect(`/login?message=${error.code}`);
+      return redirect(`/login?message=${error}`);
     }
 
     return redirect("/login?message=Check email to continue sign in process");
@@ -110,6 +112,7 @@ export default function Login({
         >
           Sign Up
         </SubmitButton>
+      
         {searchParams?.message && (
           <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
             {searchParams.message}
